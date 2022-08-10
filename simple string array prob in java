@@ -1,0 +1,37 @@
+// You are using Java
+import java.util.*;
+class Solution
+{
+    public static void main(String args[])
+    {
+        Scanner sc = new Scanner(System.in);
+        int size = sc.nextInt();
+        boolean flag = true;
+        String arr[]=new String[size];
+        for(int i=0;i<size;i++)
+        {
+            arr[i]=sc.next();
+        }
+        for(int i=0;i<size;i++)
+        {
+           // System.out.println(arr[i]);
+            if(arr[i].equals("cookie"))
+            {
+             //   System.out.println(i);
+                if(i!=(size-1) && !arr[i+1].equals("juice"))
+                {
+                    flag=false;
+                    break;
+                }
+                else if(i==size-1)
+                {
+                    flag=false;
+                }
+            }
+        }
+        if(flag)
+            System.out.print("Yes");
+        else
+            System.out.print("No");
+    }
+}
